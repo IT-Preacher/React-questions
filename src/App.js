@@ -1,18 +1,13 @@
 import React from 'react';
 import './App.css';
-import Layout from './hoc/Layout/Layout.js'
+import Layout from './hoc/Layout/Layout.js';
+import Quiz from './containers/Quiz/Quiz.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
       <Layout>
-        <div style={{width: 400, border: '1px solid black'}}>
-          <h1>Children element in Layout</h1>
-            <ul>
-                <li>First</li>
-            </ul>
-        </div>
+        <Quiz />
       </Layout>
     </div>
   );
