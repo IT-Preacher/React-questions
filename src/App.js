@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Layout from './hoc/Layout/Layout.js'
 
@@ -8,6 +9,9 @@ function App() {
       <Layout>
         <div style={{width: 400, border: '1px solid black'}}>
           <h1>Children element in Layout</h1>
+            <ul>
+                <li>First</li>
+            </ul>
         </div>
       </Layout>
     </div>
