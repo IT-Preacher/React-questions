@@ -4,9 +4,18 @@ import ActiveQuiz from '../../components/ActiveQuiz/ActiveQuiz.js'
 /*import classes from './Quiz.css';
 className={classes.Quiz}*/
 
-export default class Quize extends Component {
+class Quiz extends Component {
   state = {
-    quiz: [],
+    quiz: [
+      {
+        answers:[
+          {text: 'How old are You?'},
+          {text: 'How old are You?'},
+          {text: 'How old are You?'},
+          {text: 'How old are You?'}
+        ],
+      }
+    ],
   }
 
   render(){
@@ -14,9 +23,13 @@ export default class Quize extends Component {
       <div className="Quiz">
         <div className="QuizWrapper">
           <h1>Quiz</h1>
-          <ActiveQuiz />
+          <ActiveQuiz
+            answers={this.state.quiz[0].answers}
+          />
         </div>
       </div>
     )
   }
 }
+
+export default Quiz;

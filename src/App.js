@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
 import Layout from './hoc/Layout/Layout.js';
 import Quiz from './containers/Quiz/Quiz.js';

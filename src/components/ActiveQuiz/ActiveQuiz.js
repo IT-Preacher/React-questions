@@ -2,8 +2,8 @@ import React from 'react';
 import './ActiveQuiz.css';
 import AnswersList from './AnswersList/AnswersList.js'
 
-const ActiveQuiz = props => {
-  return (
+const ActiveQuiz = (props) => {
+  return(
     <div className="ActiveQuiz">
       <p className="Question">
         <span>
@@ -17,7 +17,7 @@ const ActiveQuiz = props => {
         answer={props.answers}
       />
     </div>
-  )
+  );
 }
 
 export default ActiveQuiz;
