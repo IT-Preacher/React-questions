@@ -8,14 +8,20 @@ class Quiz extends Component {
   state = {
     quiz: [
       {
+        question: 'What is JavaScript?',
+        rightAnswerId: 1,
         answers:[
-          {text: 'How old are You?'},
-          {text: 'How old are You?'},
-          {text: 'How old are You?'},
-          {text: 'How old are You?'}
+          {text: 'Programming language', id: 1},
+          {text: 'The Sumerian language', id:2},
+          {text: 'Nickname of Churchill in Tinder', id:3},
+          {text: 'Lots of beeches, hard to understand', id: 4}
         ],
       }
     ],
+  }
+
+  onAnswerClickHandler = (answerId) => {
+    console.log('Answer Id: ', answerId);
   }
 
   render(){
@@ -25,6 +31,8 @@ class Quiz extends Component {
           <h1>Quiz</h1>
           <ActiveQuiz
             answers={this.state.quiz[0].answers}
+            question={this.state.quiz[0].question}
+            onAnswerClick={this.onAnswerClickHandler}
           />
         </div>
       </div>

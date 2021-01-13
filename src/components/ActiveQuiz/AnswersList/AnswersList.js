@@ -3,13 +3,6 @@ import './AnswersList.css';
 import AnswerItem from './AnswerItem/AnswerItem.js';
 
 const AnswersList = (props) => {
-  /*const answersList = props.answer.map((answer, index) => {
-    <AnswerItem
-      key={index}
-      answer={answer}
-    />
-  });*/
-
   return(
     <ul className="AnswersList">
       { props.answer.map((answer, index) => {
@@ -17,6 +10,7 @@ const AnswersList = (props) => {
           <AnswerItem
             key={index}
             answer={answer}
+            onAnswerClick={props.onAnswerClick}
           />
         )
       }) }
